@@ -15,14 +15,14 @@ print(Parole(lista1))
 # Domanda 2
 def vendite (shampoo):
     som=0
-    file = open(shampoo, "r")
-    next(file)
+    with open(shampoo, "r") as file:
+        next(file)
     for line in file:
         p = line.strip().split(",")
         line = p[1]
         line =float(line)
         som +=line
-    file.close()    
+    #file.close()    
     return(som) 
 file = "shampoo_sales.csv"
 print(vendite(file))
