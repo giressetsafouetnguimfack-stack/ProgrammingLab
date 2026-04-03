@@ -15,13 +15,17 @@ print(Parole(lista1))
 # Domanda 2
 def vendite (shampoo):
     som=0
-    file = open("shampoo", "r")
+    file = open(shampoo, "r")
+    next(file)
     for line in file:
-        line = line.strip()
+        p = line.strip().split(",")
+        line = p[1]
         line =float(line)
         som +=line
     file.close()    
     return(som) 
+file = "shampoo_sales.csv"
+print(vendite(file))
 
 # Domanda 3
 def conta (conta, parola):

@@ -14,11 +14,14 @@ class Veicolo():
 
     def accellerare(self):
         # Agguingere 5 all attributo dati speed
-        self.speed = self.speed + 5
+        self.speed += 5
         
     def frenare(self):
         # Sottrae 5 dall attributo dati speed
-        self.speed = self.speed - 5
+        if self.speed < 5:
+            print("La velocita non puo essere negativa")
+        else:
+            self.speed -= 5
         
     def get_speed(self):
         # Restituisce la velocità corrente
