@@ -1,2 +1,0 @@
-# ProgrammingLab
-Programming Lab course
