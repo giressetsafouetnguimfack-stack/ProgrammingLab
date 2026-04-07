@@ -25,15 +25,34 @@ class Veicolo():
         
     def get_speed(self):
         # Restituisce la velocità corrente
-        return('{}'.format(self.speed)) 
-     
+        return('{}'.format(self.speed))
+    
+class Auto(Veicolo):
+# Costrutore sotto_classe
+    def __init__(self, anno, modelle, marca, numero_porte):
+        super().__init__(anno, modelle, marca)
+        self.numero_porte = numero_porte 
+
+    def __str__(self):
+        return super().__str__() + f" numero_porte: {self.numero_porte}"  
+
+
+class Moto(Veicolo):
+    # Costrutore sotto_classe
+    def __init__(self, anno, modelle, marca, tipo):
+        super().__init__(anno, modelle, marca)
+        self.tipo = tipo
+
+    def __str__(self):
+        return super().__str__() + f"Tipo: {self.tipo}"  
+
 # Esempio
 v = Veicolo(2020, "yaris", "Toyota")
-v.accellerare()
-v.accellerare()
-v.frenare()
 print(v)
-
+M = Moto(2022, "ML", "Mercedes", "Spotiva")
+print(M)
+A = Auto(2018, "yaya","Nanfan", 71)
+print(A)
 
 
 
