@@ -1,4 +1,4 @@
-# Esercisio 1 lez4 Classe Veicolo
+# Esercisio2  lez5 Classe Veicolo
 class Veicolo():
 
     def __init__(self, anno, modelle, marca):
