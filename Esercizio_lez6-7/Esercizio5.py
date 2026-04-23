@@ -25,3 +25,6 @@ secondi = secondi % 60
 #risutati
 print('tempo fino al prossimo compleanno:')
 print(f"{giorni} giorni, {ore} ore, {minute} minuti, {secondi}secondi")
+3
+
+
